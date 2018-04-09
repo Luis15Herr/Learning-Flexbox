@@ -1,0 +1,152 @@
+* 
+	margin: 0
+	padding: 0
+	box-sizing: border-box
+
+
+.container 
+	background: #ccc
+	width: 90%
+	max-width: 1000px
+	margin: auto
+	/* Flexbox */
+	display: flex
+	flex-flow: row wrap
+
+
+body 
+	background: #e9e9e9
+
+
+header
+	background-color: #2c3e50
+	width: 100%
+	padding: 20px
+	/* Flexbox */
+	display: flex
+	justify-content: space-between
+	align-items: center
+
+	flex-direction: row
+	flex-wrap: wrap
+	.logo
+		color: #fff
+		font-size: 30px
+		img
+			width: 150px
+			vertical-align: top
+		a
+			color: #fff
+			text-decoration: none
+			line-height: 115px
+	
+	nav 
+		width: 50%	
+		/*Flex*/
+		display: flex
+		flex-wrap: wrap
+		align-items: center
+		a
+			background-color: #c0392b
+			color: #fff
+			text-decoration: none
+			padding: 10px
+			text-align: center
+			/*Flex*/
+			flex-grow: 1
+			&:hover
+				background-color: #e74c3c
+ 
+
+.main 
+	background: #fff
+	padding: 20px
+	flex: 1 1 70%
+	/*flex:1*/
+	article 
+		margin-bottom: 20px
+		padding-bottom: 20px
+		border-bottom: 1px solid #000
+		&:nth-last-child(1)
+			margin-bottom: 0
+			padding-bottom: 0
+			border-bottom: none
+
+
+aside
+	background-color: #e67e22
+	/*FLEX*/
+	flex: 1 1 30%
+	display: flex
+	flex-wrap: wrap
+	justify-content: space-around
+	flex-direction: column 
+	.widget
+		background-color: #d35400
+		height: auto
+		margin: 10px
+		text-align: center
+
+footer 
+	width: 100%
+	background-color: #2c3e50
+	padding: 20px
+	/*flex*/
+	display: flex
+	flex-wrap: wrap
+	justify-content: space-between
+	.links
+		background-color: #c0392b
+		display: flex
+		flex-wrap: wrap
+		a 
+			color: #fff
+			flex-grow: 1
+			padding: 10px
+			text-align: center
+			text-decoration: none	
+			&:hover 
+				background: #E74C3C
+	.social 
+		background: #e67e22
+		a 
+			display: inline-block
+			color: #fff
+			padding: 10px
+			text-align: center
+			text-decoration: none
+
+
+.imagen
+	border: auto
+
+
+@media screen and (max-width: 800px)
+	.container
+		flex-direction: column
+	
+	header
+		flex-direction: column
+		.logo
+			margin: 20px 0 
+		nav 
+			width: 100%
+	
+	aside
+		flex-direction: row
+		flex: 0
+		.widget
+			flex-grow: 1
+			flex-wrap: wrap
+			&:first-child 
+				height: auto
+			
+ 
+
+@media screen and (max-width: 600px)
+	footer
+		justify-content: space-around
+	aside
+		flex-direction: column
+		.widget:first-child
+			height: auto
